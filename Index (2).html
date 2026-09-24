@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christopher Juan Manuel Susanto // ATS CV & PORTFOLIO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        arasaka: {
+                            bg: '#08080a',
+                            surface: '#121218',
+                            panel: '#181820',
+                            border: '#2e2e38',
+                            red: '#ff003c',
+                            'red-glow': '#ff003c55',
+                            yellow: '#f59e0b',
+                            'yellow-glow': '#f59e0b44',
+                            cyan: '#00f0ff',
+                            text: '#e2e8f0',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        mono: ['"Courier New"', 'Courier', 'monospace'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            background-color: #08080a;
+            color: #e2e8f0;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .font-mono-tech {
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        /* Strict Harvard ATS styling for high recruiter parsing compatibility */
+        .cv-harvard-container {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #111827;
+            background-color: #ffffff;
+            line-height: 1.5;
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 60, 0.03), rgba(0, 240, 255, 0.01), rgba(255, 0, 60, 0.03));
+            background-size: 100% 3px, 3px 100%;
+            z-index: 999;
+        }
+
+        .animated-cyber-bg {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 50%, #1a0309 0%, #08080a 70%);
+            overflow: hidden;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.35;
+            animation: pulseGlow 8s ease-in-out infinite alternate;
+        }
+
+        .orb-1 { width: 450px; height: 450px; background: #ff003c; top: -10%; left: -10%; animation-duration: 7s; }
+        .orb-2 { width: 500px; height: 500px; background: #880022; bottom: -15%; right: -10%; animation-duration: 10s; }
+        .orb-3 { width: 350px; height: 350px; background: #ff003c; top: 40%; right: 30%; opacity: 0.2; animation-duration: 6s; }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1) translate(0, 0); opacity: 0.25; }
+            50% { transform: scale(1.2) translate(30px, -20px); opacity: 0.45; }
+            100% { transform: scale(1) translate(-20px, 30px); opacity: 0.25; }
+        }
+
+        .glitch-hover:hover {
+            text-shadow: 2px 0 #ff003c, -2px 0 #00f0ff;
+        }
+
+        .cyber-border {
+            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+        }
+
+        .cyber-border-sm {
+            clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        }
+
+        .cyber-btn {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .cyber-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.5);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #08080a; }
+        ::-webkit-scrollbar-thumb { background: #ff003c; border-radius: 2px; }
+
+        @media print {
+            body { background: white !important; color: black !important; }
+            .scanlines, .animated-cyber-bg, header, footer, #view-portfolio, button { display: none !important; }
+            #view-cv { display: block !important; padding: 0 !important; margin: 0 !important; }
+            .cv-harvard-container { box-shadow: none !important; border: none !important; width: 100% !important; max-width: 100% !important; }
+        }
+    </style>
+</head>
+<body class="bg-arasaka-bg text-arasaka-text relative min-h-screen flex flex-col justify-between selection:bg-arasaka-red selection:text-white">
+
+    <div class="scanlines"></div>
+
+    <div class="animated-cyber-bg">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+        <div class="absolute inset-0 opacity-15 bg-[linear-gradient(to_right,#2e2e38_1px,transparent_1px),linear-gradient(to_bottom,#2e2e38_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-arasaka-surface/90 backdrop-blur-md border-b border-arasaka-red/40 px-4 lg:px-12 py-3 flex flex-wrap justify-between items-center shadow-lg shadow-black/50">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-arasaka-red flex items-center justify-center font-bold text-black cyber-border-sm text-xl shadow-[0_0_10px_#ff003c]">
+                <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <div>
+                <h1 class="font-mono-tech text-lg font-bold tracking-wider text-white">PORTFOLIO & CV // ARASAKA NET</h1>
+                <p class="text-xs text-arasaka-yellow font-mono-tech flex items-center space-x-2">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-1"></span>
+                    <span>LOC: JAKARTA, ID</span>
+                    <span class="text-arasaka-muted">|</span>
+                    <span id="live-clock" class="text-arasaka-cyan">00:00:00 WIB</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="flex items-center space-x-2 sm:space-x-4 mt-2 sm:mt-0">
+            <div class="bg-arasaka-panel p-1 border border-arasaka-border cyber-border-sm flex space-x-1">
+                <button onclick="switchView('portfolio')" id="btn-portfolio" class="px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all bg-arasaka-red text-white cyber-border-sm shadow-[0_0_10px_#ff003c]">
+                    <i class="fa-solid fa-terminal mr-1"></i> Portofolio
+                </button>
+                <button onclick="switchView('cv')" id="btn-cv" class="px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all text-arasaka-muted hover:text-white">
+                    <i class="fa-solid fa-file-lines mr-1"></i> CV
+                </button>
+            </div>
+
+            <button onclick="openAdminModal()" id="admin-badge" class="px-3 py-1.5 bg-arasaka-panel border border-arasaka-border text-xs font-mono-tech text-arasaka-muted hover:text-white cyber-border-sm transition flex items-center space-x-1">
+                <i class="fa-solid fa-lock text-arasaka-yellow"></i>
+                <span id="admin-status-text">Admin Login</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow z-10 container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Portofolio View (Default Active - Di Sebelah Kiri) -->
+        <div id="view-portfolio" class="space-y-12 animate-fadeIn">
+            
+            <!-- Hero Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-arasaka-surface/95 backdrop-blur border border-arasaka-border p-6 sm:p-10 cyber-border relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-arasaka-red/10 blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-arasaka-yellow/10 blur-3xl pointer-events-none"></div>
+                
+                <div class="lg:col-span-5 flex flex-col items-center justify-center relative">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-arasaka-red to-arasaka-yellow rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative w-48 h-56 sm:w-60 sm:h-72 bg-arasaka-panel border-2 border-arasaka-red overflow-hidden cyber-border">
+                            <img src="image_32855e.jpg" alt="Christopher Juan Manuel Susanto" class="w-full h-full object-cover filter contrast-125 saturate-150 hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/400x500/121218/ff003c?text=JUAN+SUSANTO'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-2 left-2 right-2 text-center">
+                                <span class="bg-arasaka-red text-black font-mono-tech font-bold text-xs px-2 py-0.5 cyber-border-sm">OPERATIVE ID #JS-05</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-4">
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 bg-arasaka-panel border border-arasaka-red/50 text-arasaka-red text-xs font-mono-tech cyber-border-sm">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>ARASAKA INFORMATION SYSTEMS DIVISION // JAKARTA</span>
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white uppercase glitch-hover">
+                        Christopher Juan Manuel <span class="text-arasaka-red">Susanto</span>
+                    </h2>
+                    
+                    <p class="text-arasaka-muted font-mono-tech text-sm sm:text-base border-l-2 border-arasaka-yellow pl-4">
+                        Information Systems Student // 5th Semester Operative. Specialized in Advanced Data Analytics, Business Intelligence, Enterprise Database Architecture, and AI-driven workflows. Based in Jakarta, Indonesia.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 font-mono-tech text-xs">
+                        <div class="flex items-center space-x-2 bg-arasaka-panel p-2.5 border border-arasaka-border">
+                            <i class="fa-solid fa-envelope text-arasaka-red"></i>
+                            <span class="truncate text-white">christopherjuanmanuel@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2 bg-arasaka-panel p-2.5 border border-arasaka-border">
+                            <i class="fa-solid fa-phone text-arasaka-yellow"></i>
+                            <span class="text-white">082133558847</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <a href="https://www.linkedin.com/in/juan-susanto-88291a29a/" target="_blank" class="px-4 py-2 bg-arasaka-panel border border-arasaka-red text-white text-sm font-mono-tech cyber-btn hover:bg-arasaka-red flex items-center space-x-2">
+                            <i class="fa-brands fa-linkedin text-lg"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://x.com/alchemistgren" target="_blank" class="px-4 py-2 bg-arasaka-panel border border-arasaka-border text-white text-sm font-mono-tech cyber-btn hover:border-arasaka-cyan flex items-center space-x-2">
+                            <i class="fa-brands fa-x-twitter text-lg"></i>
+                            <span>Twitter/X</span>
+                        </a>
+                        <a href="https://www.instagram.com/j_susanto46/?hl=en" target="_blank" class="px-4 py-2 bg-arasaka-panel border border-arasaka-border text-white text-sm font-mono-tech cyber-btn hover:border-arasaka-yellow flex items-center space-x-2">
+                            <i class="fa-brands fa-instagram text-lg"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bio and Currently Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-7 bg-arasaka-surface/90 border border-arasaka-border p-6 sm:p-8 cyber-border space-y-4 flex flex-col justify-center">
+                    <div class="flex items-center space-x-2 text-arasaka-red font-mono-tech text-xs">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>OPERATIVE INTEL & OBJECTIVES</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white font-mono-tech">Professional Journey & Mission</h3>
+                    <p class="text-arasaka-muted font-mono-tech text-sm leading-relaxed">
+                        My journey into information systems and data analytics began with building analytical pipelines and transforming raw data into actionable enterprise insights. What started with foundational database management steadily grew into a broader passion for business intelligence, SQL architecture, and AI-driven workflows.
+                    </p>
+                    <p class="text-arasaka-muted font-mono-tech text-sm leading-relaxed">
+                        I am currently focused on sharpening my data engineering capabilities, competing in hackathons, and mastering advanced visualization tools to design systems that remain robust, scalable, and impactful as data grows.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-5 bg-arasaka-surface/90 border border-arasaka-yellow/60 p-6 sm:p-8 cyber-border space-y-4 relative">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-arasaka-yellow/10 blur-2xl pointer-events-none"></div>
+                    <div class="flex justify-between items-center border-b border-arasaka-border pb-3">
+                        <h3 class="font-mono-tech font-bold text-lg text-white flex items-center">
+                            <i class="fa-solid fa-bolt text-arasaka-yellow mr-2 animate-pulse"></i> Currently
+                        </h3>
+                        <span class="text-[10px] font-mono-tech text-arasaka-yellow bg-arasaka-yellow/10 px-2 py-0.5 border border-arasaka-yellow/30">UPDATED SEPTEMBER 2026</span>
+                    </div>
+
+                    <ul id="currently-list" class="space-y-3 font-mono-tech text-xs sm:text-sm text-arasaka-muted">
+                        <!-- Populated by JS -->
+                    </ul>
+
+                    <div id="currently-edit-btn-container" class="hidden pt-2">
+                        <button onclick="openEditCurrentlyModal()" class="w-full py-2 bg-arasaka-yellow text-black font-mono-tech font-bold text-xs cyber-btn hover:bg-white transition flex items-center justify-center space-x-1">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            <span>EDIT CURRENT ACTIVITIES</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Competencies -->
+            <section class="space-y-6">
+                <div class="flex items-center justify-between border-b border-arasaka-border pb-3">
+                    <h3 class="text-xl font-bold font-mono-tech text-white flex items-center">
+                        <i class="fa-solid fa-microchip text-arasaka-red mr-2"></i> TECHNICAL COMPETENCIES & TECH STACK
+                    </h3>
+                    <span class="text-xs font-mono-tech text-arasaka-yellow">SECURITY CLEARANCE: LEVEL 5</span>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-arasaka-red mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-chart-pie"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Power BI</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Advanced</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-arasaka-cyan mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-chart-line"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Tableau</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Expert</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-arasaka-red mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-database"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Oracle</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Certified</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-arasaka-yellow mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-code"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">SQL Language</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Mastery</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-emerald-400 mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-chart-bar"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Google Studio</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Proficient</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-blue-400 mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-cloud"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Google Workspace</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Advanced</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-emerald-500 mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-file-excel"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Excel</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Expert</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-arasaka-red mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-brain"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">IBM SkillsBuild</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">AI & Data</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-purple-400 mb-2 group-hover:scale-110 transition"><i class="fa-solid fa-network-wired"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Langflow</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">AI Workflows</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-yellow-400 mb-2 group-hover:scale-110 transition"><i class="fa-brands fa-python"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Python</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Core</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-orange-500 mb-2 group-hover:scale-110 transition"><i class="fa-brands fa-java"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">Java</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Development</span>
+                    </div>
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-4 cyber-border text-center group hover:border-arasaka-red transition duration-300">
+                        <div class="text-3xl text-blue-500 mb-2 group-hover:scale-110 transition"><i class="fa-brands fa-aws"></i></div>
+                        <h4 class="font-mono-tech text-sm font-bold text-white">AWS Cloud</h4>
+                        <span class="text-[10px] text-arasaka-yellow font-mono-tech">Certified</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Certifications Section -->
+            <section class="space-y-6">
+                <div class="flex flex-wrap items-center justify-between border-b border-arasaka-border pb-3 gap-2">
+                    <h3 class="text-xl font-bold font-mono-tech text-white flex items-center">
+                        <i class="fa-solid fa-certificate text-arasaka-yellow mr-2"></i> CERTIFIED CREDENTIALS & TRAINING
+                    </h3>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-xs font-mono-tech text-arasaka-muted">VERIFIED RECORDS</span>
+                        <button onclick="openAddCertModal()" id="add-cert-btn" class="hidden px-3 py-1 bg-arasaka-red text-white text-xs font-mono-tech cyber-border-sm hover:bg-white hover:text-black transition flex items-center space-x-1 shadow-[0_0_10px_#ff003c]">
+                            <i class="fa-solid fa-plus"></i>
+                            <span>ADD NEW ACHIEVEMENT</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="certifications-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+
+            <!-- Experience: Organization & Volunteering -->
+            <section class="space-y-6">
+                <div class="flex items-center justify-between border-b border-arasaka-border pb-3">
+                    <h3 class="text-xl font-bold font-mono-tech text-white flex items-center">
+                        <i class="fa-solid fa-briefcase text-arasaka-red mr-2"></i> EXPERIENCE: ORGANIZATION & VOLUNTEERING
+                    </h3>
+                    <span class="text-xs font-mono-tech text-arasaka-yellow">VERIFIED ARCHIVE</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
+                    <!-- Organization Experience Card -->
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-6 cyber-border space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-arasaka-border pb-3">
+                            <i class="fa-solid fa-users-gear text-arasaka-red text-xl"></i>
+                            <h4 class="text-lg font-bold font-mono-tech text-white">University Organization Experience</h4>
+                        </div>
+
+                        <div class="space-y-6 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-arasaka-border">
+                            <div class="relative pl-8 space-y-1">
+                                <div class="absolute left-1.5 top-1.5 w-3 h-3 bg-arasaka-red rounded-full ring-4 ring-arasaka-bg"></div>
+                                <span class="text-xs font-mono-tech text-arasaka-muted">1ST TO 3RD SEMESTER</span>
+                                <h5 class="font-bold text-white text-base">Organization Staff Member</h5>
+                                <p class="text-xs text-arasaka-muted font-mono-tech">Active involvement in university student organizations, coordinating campus events, managing administrative workflows, and team collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Orphanage Volunteering Experience Card -->
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-6 cyber-border space-y-6">
+                        <div class="flex items-center space-x-3 border-b border-arasaka-border pb-3">
+                            <i class="fa-solid fa-hands-holding-child text-arasaka-yellow text-xl"></i>
+                            <h4 class="text-lg font-bold font-mono-tech text-white">Social Impact & Orphanage Volunteering</h4>
+                        </div>
+
+                        <p class="text-xs text-arasaka-muted font-mono-tech">
+                            Deeply committed to community service, organizing educational drives, and charitable visits to local orphanages to support underprivileged children with study materials, nutrition, and mentorship.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-3 pt-2">
+                            <div class="relative group overflow-hidden border border-arasaka-border cyber-border-sm cursor-pointer" onclick="openPhotoModal('image_3204bf.jpg', 'Orphanage Charity Drive with Essential Supplies')">
+                                <img src="image_3204bf.jpg" alt="Orphanage Charity" class="w-full h-28 object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/400x300/121218/ff003c?text=Charity+Drive'">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-1 bg-black/80 text-[10px] font-mono-tech text-arasaka-yellow px-1.5 py-0.5">Charity Drive</span>
+                            </div>
+                            <div class="relative group overflow-hidden border border-arasaka-border cyber-border-sm cursor-pointer" onclick="openPhotoModal('image_3204a3.jpg', 'Interactive Education Session at Orphanage')">
+                                <img src="image_3204a3.jpg" alt="Education Session" class="w-full h-28 object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/400x300/121218/ff003c?text=Education+Session'">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-1 bg-black/80 text-[10px] font-mono-tech text-arasaka-yellow px-1.5 py-0.5">Education Session</span>
+                            </div>
+                            <div class="relative group overflow-hidden border border-arasaka-border cyber-border-sm cursor-pointer col-span-2" onclick="openPhotoModal('image_3201db.jpg', 'Community Outreach & Mentorship Program')">
+                                <img src="image_3201db.jpg" alt="Community Outreach" class="w-full h-28 object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://placehold.co/400x300/121218/ff003c?text=Community+Outreach'">
+                                <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition"></div>
+                                <span class="absolute bottom-1 left-1 bg-black/80 text-[10px] font-mono-tech text-arasaka-yellow px-1.5 py-0.5">Community Outreach Team</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Get in touch section (bottom) -->
+            <section class="bg-arasaka-surface/95 backdrop-blur border border-arasaka-border p-6 sm:p-10 cyber-border space-y-6">
+                <div class="border-b border-arasaka-border pb-4">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-mono-tech">Get in touch</h3>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-6 space-y-4">
+                        <h4 class="text-lg font-bold text-white">Open to new opportunities</h4>
+                        <p class="text-arasaka-muted font-mono-tech text-sm leading-relaxed">
+                            I am open to roles, collaborations and project enquiries. Email is the surest way to reach me, and I reply to everything that arrives.
+                        </p>
+                        <div>
+                            <a href="mailto:christopherjuanmanuel@gmail.com" class="inline-flex items-center space-x-2 px-5 py-2.5 bg-arasaka-panel border border-arasaka-red text-white text-sm font-mono-tech cyber-btn hover:bg-arasaka-red transition">
+                                <span>Send me an email</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-arasaka-panel border border-arasaka-border p-6 cyber-border space-y-6">
+                        <!-- Email Box -->
+                        <div class="space-y-1">
+                            <span class="text-[10px] font-mono-tech text-arasaka-muted uppercase tracking-widest">Email</span>
+                            <div class="flex items-center justify-between bg-arasaka-surface p-3 border border-arasaka-border cyber-border-sm">
+                                <span class="text-white font-mono-tech text-sm select-all">christopherjuanmanuel@gmail.com</span>
+                                <button onclick="copyEmail()" class="text-arasaka-muted hover:text-white transition p-1" title="Copy email">
+                                    <i class="fa-regular fa-copy text-lg"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Based In Box -->
+                        <div class="space-y-1 border-t border-arasaka-border pt-4">
+                            <span class="text-[10px] font-mono-tech text-arasaka-muted uppercase tracking-widest">Based In</span>
+                            <div class="text-white font-mono-tech text-sm">
+                                Jakarta, Indonesia
+                                <div id="footer-live-clock" class="text-xs text-arasaka-cyan mt-0.5">00:00 local</div>
+                            </div>
+                        </div>
+
+                        <!-- Elsewhere Box -->
+                        <div class="space-y-2 border-t border-arasaka-border pt-4">
+                            <span class="text-[10px] font-mono-tech text-arasaka-muted uppercase tracking-widest">Elsewhere</span>
+                            <div class="flex flex-col space-y-1 font-mono-tech text-sm">
+                                <a href="https://www.linkedin.com/in/juan-susanto-88291a29a/" target="_blank" class="text-arasaka-muted hover:text-arasaka-cyan transition flex items-center space-x-2">
+                                    <i class="fa-brands fa-linkedin w-4"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://x.com/alchemistgren" target="_blank" class="text-arasaka-muted hover:text-arasaka-cyan transition flex items-center space-x-2">
+                                    <i class="fa-brands fa-x-twitter w-4"></i>
+                                    <span>Twitter/X</span>
+                                </a>
+                                <a href="https://www.instagram.com/j_susanto46/?hl=en" target="_blank" class="text-arasaka-muted hover:text-arasaka-cyan transition flex items-center space-x-2">
+                                    <i class="fa-brands fa-instagram w-4"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Harvard ATS CV View (Di Sebelah Kanan / Hidden by Default) -->
+        <div id="view-cv" class="space-y-6 animate-fadeIn max-w-4xl mx-auto hidden">
+            
+            <div class="flex justify-between items-center bg-arasaka-surface/90 p-4 border border-arasaka-border">
+                <div class="flex items-center space-x-2 text-xs font-mono-tech text-arasaka-yellow">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Harvard ATS Format (Recruiter & ATS Optimized - High Compatibility)</span>
+                </div>
+                <button onclick="window.print()" class="px-5 py-2 bg-arasaka-red text-white text-xs font-mono-tech font-bold cyber-btn hover:bg-white hover:text-black transition">
+                    <i class="fa-solid fa-print mr-2"></i> PRINT / SAVE PDF
+                </button>
+            </div>
+
+            <!-- Harvard Standard Paper Sheet -->
+            <div class="cv-harvard-container p-8 sm:p-12 shadow-2xl space-y-6 rounded-sm">
+                
+                <!-- Header -->
+                <div class="text-center space-y-1.5 border-b-2 border-gray-900 pb-4">
+                    <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 uppercase">Christopher Juan Manuel Susanto</h1>
+                    <p class="text-xs sm:text-sm text-gray-700 font-medium">
+                        Jakarta, Indonesia | +62 821-3355-8847 | christopherjuanmanuel@gmail.com
+                    </p>
+                    <p class="text-xs text-blue-700 font-medium">
+                        <a href="https://www.linkedin.com/in/juan-susanto-88291a29a/" target="_blank" class="hover:underline">LinkedIn: linkedin.com/in/juan-susanto-88291a29a</a>
+                    </p>
+                </div>
+
+                <!-- Education -->
+                <div class="space-y-2">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-900 border-b border-gray-400 pb-1">Education</h2>
+                    <div class="flex justify-between items-start text-sm">
+                        <div>
+                            <strong class="text-gray-900">Undergraduate Student in Information Systems</strong> (5th Semester)
+                            <div class="text-gray-700 text-xs italic">Focus: Data Analytics, Enterprise Database Architecture & Business Intelligence</div>
+                        </div>
+                        <div class="text-right text-xs text-gray-700 font-medium whitespace-nowrap ml-2">
+                            Jakarta, Indonesia<br>Expected 2028
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Summary -->
+                <div class="space-y-2">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-900 border-b border-gray-400 pb-1">Professional Summary</h2>
+                    <p class="text-xs sm:text-sm text-gray-800 leading-relaxed text-justify">
+                        Information Systems undergraduate student in the fifth semester with demonstrated expertise in data analytics, database administration, and BI visualization. Certified across Oracle SQL, AWS Cloud, and IBM AI-driven workflows. Proven record of managing university student organizations and contributing to social impact community initiatives. Highly adept at translating complex data requirements into actionable business intelligence insights.
+                    </p>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="space-y-2">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-900 border-b border-gray-400 pb-1">Technical Skills</h2>
+                    <div class="text-xs sm:text-sm text-gray-800 space-y-1.5">
+                        <div><strong class="text-gray-900">Data & Business Intelligence:</strong> Power BI, Tableau, Google Studio, Microsoft Excel (Advanced Analytics & Modeling)</div>
+                        <div><strong class="text-gray-900">Databases & Query Languages:</strong> Oracle AI Database, SQL Language, Firebase, Relational Database Design</div>
+                        <div><strong class="text-gray-900">Programming & AI Workflows:</strong> Python, Java, IBM SkillsBuild AI Agent Workflows, Langflow</div>
+                        <div><strong class="text-gray-900">Cloud & Productivity Tools:</strong> AWS Cloud Computing (Certified), Google Workspace Enterprise Administration</div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Professional Training -->
+                <div class="space-y-3">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-900 border-b border-gray-400 pb-1">Certifications & Specialized Training</h2>
+                    <div id="harvard-cert-list" class="space-y-2.5 text-xs sm:text-sm">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Experience & Leadership -->
+                <div class="space-y-3">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-gray-900 border-b border-gray-400 pb-1">Leadership & Community Impact</h2>
+                    
+                    <div class="space-y-3 text-xs sm:text-sm">
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <strong class="text-gray-900">University Student Organization</strong> — <span class="text-gray-700 italic">Staff Member</span>
+                                </div>
+                                <div class="text-right text-xs text-gray-700 font-medium whitespace-nowrap ml-2">
+                                    1st – 3rd Semester
+                                </div>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-800 space-y-1 pl-1 mt-1">
+                                <li>Coordinated campus student events, managed administrative workflows, and facilitated cross-team communications.</li>
+                                <li>Collaborated with student leadership to execute institutional programs efficiently under tight deadlines.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-1">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <strong class="text-gray-900">Community Outreach & Orphanage Volunteer Program</strong> — <span class="text-gray-700 italic">Volunteer & Mentor</span>
+                                </div>
+                                <div class="text-right text-xs text-gray-700 font-medium whitespace-nowrap ml-2">
+                                    Ongoing
+                                </div>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-800 space-y-1 pl-1 mt-1">
+                                <li>Organized charitable donation drives and distributed essential educational supplies and study materials to underprivileged children.</li>
+                                <li>Conducted interactive educational mentoring sessions to support foundational learning and youth development.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="mt-20 border-t border-arasaka-border bg-arasaka-surface py-6 px-6 text-center font-mono-tech text-xs text-arasaka-muted z-10">
+        <p>PORTFOLIO & CV // OPERATIVE: CHRISTOPHER JUAN MANUEL SUSANTO</p>
+        <p class="mt-1 text-[10px] text-arasaka-yellow">SECURE ENCRYPTION ACTIVE • ATS RECRUITER COMPLIANT MODE • © 2026</p>
+    </footer>
+
+    <!-- Certificate Detail Modal -->
+    <div id="certModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-red max-w-lg w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-red hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-yellow font-mono-tech text-xs">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>VERIFIED CREDENTIAL RECORD</span>
+            </div>
+            <h3 id="modalTitle" class="text-xl font-bold text-white">Certificate Title</h3>
+            <p id="modalSubtitle" class="text-sm font-mono-tech text-arasaka-red"></p>
+            <p id="modalDesc" class="text-xs font-mono-tech text-arasaka-muted leading-relaxed"></p>
+            <div class="pt-4 border-t border-arasaka-border flex justify-end items-center">
+                <button onclick="closeModals()" class="px-4 py-1.5 bg-arasaka-panel border border-arasaka-border text-xs font-mono-tech text-white hover:bg-arasaka-red">CLOSE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Modal -->
+    <div id="photoModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-yellow max-w-2xl w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-yellow hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-yellow font-mono-tech text-xs">
+                <i class="fa-solid fa-camera"></i>
+                <span>COMMUNITY VOLUNTEERING ARCHIVE</span>
+            </div>
+            <img id="modalImgSrc" src="" alt="Archive Photo" class="w-full max-h-96 object-contain border border-arasaka-border">
+            <p id="modalImgCaption" class="text-xs font-mono-tech text-arasaka-muted text-center"></p>
+        </div>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="adminModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-red max-w-sm w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-red hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-red font-mono-tech text-xs">
+                <i class="fa-solid fa-user-shield"></i>
+                <span>ADMIN AUTHENTICATION GATEWAY</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Owner Access Control</h3>
+            <p class="text-xs font-mono-tech text-arasaka-muted">Enter admin passcode to unlock certificate, current activity, and passcode modification privileges.</p>
+            <div class="space-y-3 pt-2">
+                <input type="password" id="adminPasscode" placeholder="Enter Arasaka Passcode..." class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-sm font-mono-tech text-white focus:border-arasaka-red outline-none cyber-border-sm">
+                <div id="loginError" class="text-[10px] font-mono-tech text-arasaka-red hidden">Invalid passcode. Access denied.</div>
+                <button onclick="verifyAdminLogin()" class="w-full py-2 bg-arasaka-red text-white text-xs font-mono-tech font-bold cyber-btn hover:bg-white hover:text-black transition">
+                    AUTHENTICATE AS OWNER
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Certificate Modal -->
+    <div id="addCertModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-yellow max-w-lg w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-yellow hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-yellow font-mono-tech text-xs">
+                <i class="fa-solid fa-plus-circle"></i>
+                <span>PUBLISH NEW ACHIEVEMENT / CERTIFICATE</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Add Credential Record</h3>
+            
+            <div class="space-y-3 text-xs font-mono-tech">
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Issuer Organization:</label>
+                    <input type="text" id="newIssuer" placeholder="e.g. Google Cloud, Dicoding, IBM" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm">
+                </div>
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Credential Title:</label>
+                    <input type="text" id="newTitle" placeholder="e.g. Advanced Data Engineering" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm">
+                </div>
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Date Awarded:</label>
+                    <input type="text" id="newDate" placeholder="e.g. 15 Sept 2026" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm">
+                </div>
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Credential ID / Note:</label>
+                    <input type="text" id="newId" placeholder="e.g. ID: XYZ-9988" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm">
+                </div>
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Description:</label>
+                    <textarea id="newDesc" rows="2" placeholder="Brief details about the program..." class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm resize-none"></textarea>
+                </div>
+                
+                <div class="pt-2 flex justify-end space-x-3">
+                    <button onclick="closeModals()" class="px-4 py-2 bg-arasaka-panel border border-arasaka-border text-white hover:bg-arasaka-red">CANCEL</button>
+                    <button onclick="saveNewCertificate()" class="px-5 py-2 bg-arasaka-yellow text-black font-bold cyber-btn hover:bg-white">PUBLISH TO NET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Currently Modal -->
+    <div id="editCurrentlyModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-yellow max-w-lg w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-yellow hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-yellow font-mono-tech text-xs">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <span>UPDATE CURRENT ACTIVITIES</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Edit Current Focus Items</h3>
+            <div class="space-y-3 text-xs font-mono-tech">
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Item 1 (e.g. Hackathon IBM):</label>
+                    <textarea id="currItem1" rows="2" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm resize-none"></textarea>
+                </div>
+                <div>
+                    <label class="block text-arasaka-muted mb-1">Item 2 (e.g. Udemy Data Analytics Camp):</label>
+                    <textarea id="currItem2" rows="2" class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm resize-none"></textarea>
+                </div>
+                <div class="pt-2 flex justify-end space-x-3">
+                    <button onclick="closeModals()" class="px-4 py-2 bg-arasaka-panel border border-arasaka-border text-white hover:bg-arasaka-red">CANCEL</button>
+                    <button onclick="saveCurrentActivities()" class="px-5 py-2 bg-arasaka-yellow text-black font-bold cyber-btn hover:bg-white">UPDATE ACTIVITIES</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Change Passcode Modal -->
+    <div id="changePasscodeModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-arasaka-surface border-2 border-arasaka-yellow max-w-sm w-full p-6 cyber-border relative space-y-4">
+            <button onclick="closeModals()" class="absolute top-4 right-4 text-arasaka-yellow hover:text-white text-xl font-mono-tech">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center space-x-2 text-arasaka-yellow font-mono-tech text-xs">
+                <i class="fa-solid fa-key"></i>
+                <span>SECURITY CLEARANCE // MODIFY PASSCODE</span>
+            </div>
+            <h3 class="text-lg font-bold text-white">Change Admin Passcode</h3>
+            <div class="space-y-3 text-xs font-mono-tech">
+                <div>
+                    <label class="block text-arasaka-muted mb-1">New Passcode:</label>
+                    <input type="text" id="newPasscodeInput" placeholder="Enter new passcode..." class="w-full bg-arasaka-panel border border-arasaka-border px-3 py-2 text-white outline-none focus:border-arasaka-yellow cyber-border-sm">
+                </div>
+                <div class="pt-2 flex justify-end space-x-3">
+                    <button onclick="closeModals()" class="px-4 py-2 bg-arasaka-panel border border-arasaka-border text-white hover:bg-arasaka-red">CANCEL</button>
+                    <button onclick="saveNewPasscode()" class="px-5 py-2 bg-arasaka-yellow text-black font-bold cyber-btn hover:bg-white">UPDATE PASSCODE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const timeString = new Intl.DateTimeFormat('en-GB', options).format(now);
+            const clockEl = document.getElementById('live-clock');
+            const footerClockEl = document.getElementById('footer-live-clock');
+            if (clockEl) clockEl.innerText = timeString + ' WIB';
+            if (footerClockEl) {
+                const shortOptions = { timeZone: 'Asia/Jakarta', hour: '2-digit', minute: '2-digit', hour12: false };
+                const shortTime = new Intl.DateTimeFormat('en-GB', shortOptions).format(now);
+                footerClockEl.innerText = shortTime + ' local';
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        function copyEmail() {
+            const email = "christopherjuanmanuel@gmail.com";
+            if (window.clipboardData && window.clipboardData.setData) {
+                window.clipboardData.setData("Text", email);
+                alert("Email copied to clipboard!");
+            } else {
+                const el = document.createElement('textarea');
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                try {
+                    document.execCommand('copy');
+                    alert("Email copied to clipboard: " + email);
+                } catch (err) {
+                    alert("Unable to copy email automatically.");
+                }
+                document.body.removeChild(el);
+            }
+        }
+
+        let isAdmin = false;
+        let dynamicCertificates = JSON.parse(localStorage.getItem('arasaka_custom_certs') || '[]');
+        let currentActivities = JSON.parse(localStorage.getItem('arasaka_current_acts') || JSON.stringify([
+            "Participating in the Hackathon IBM, building AI-driven data intelligence solutions and intelligent agent workflows.",
+            "Enrolled in the Udemy Data Analytics Camp, sharpening skills in advanced Power BI, Tableau, and complex SQL data modeling."
+        ]));
+        let customAdminPasscode = localStorage.getItem('arasaka_admin_passcode') || 'arasaka2026';
+
+        function renderCurrently() {
+            const listEl = document.getElementById('currently-list');
+            if (!listEl) return;
+            let html = '';
+            const icons = ['fa-angles-right text-arasaka-red', 'fa-angles-right text-arasaka-yellow'];
+            
+            currentActivities.forEach((act, idx) => {
+                html += `
+                    <li class="flex items-start space-x-2 bg-arasaka-panel p-2.5 border border-arasaka-border">
+                        <span class="${icons[idx % icons.length]} mt-0.5"><i class="fa-solid fa-angles-right"></i></span>
+                        <span>${act}</span>
+                    </li>
+                `;
+            });
+            listEl.innerHTML = html;
+        }
+
+        renderCurrently();
+
+        function renderCertificates() {
+            const grid = document.getElementById('certifications-grid');
+            const harvardList = document.getElementById('harvard-cert-list');
+            if (!grid) return;
+            
+            let defaultCerts = [
+                {
+                    issuer: 'IBM SkillsBuild',
+                    date: '01 Sept 2026',
+                    title: 'Data - AI Agent for Data Analysis',
+                    desc: 'Hosted by Hacktiv8 Indonesia in collaboration with IBM SkillsBuild. 9 Hours intensive program.',
+                    id: 'ID: 12337/H8/...'
+                },
+                {
+                    issuer: 'Dicoding Academy',
+                    date: '09 Sept 2026',
+                    title: 'Belajar Dasar Cloud dan Gen AI di AWS',
+                    desc: 'AWS cloud computing fundamentals, global infrastructure, security, and Generative AI support (13 Hours).',
+                    id: 'ID: JLX1KLRKGP72'
+                },
+                {
+                    issuer: 'Dicoding Academy',
+                    date: '09 Sept 2026',
+                    title: 'Spec-Driven Development dengan Kiro',
+                    desc: 'Spec-driven software engineering paradigm, AI-assisted workflows, and structured application spec design (10 Hours).',
+                    id: 'ID: N9ZO04LMYXG5'
+                },
+                {
+                    issuer: 'Dicoding & DBS',
+                    date: '26 Aug 2026',
+                    title: 'Introduction to Financial Literacy',
+                    desc: 'Coding Camp powered by DBS Foundation 2026. Financial future navigation, investing, and smart loan management (6 Hours).',
+                    id: 'ID: 07Z6Q5DWRZQR'
+                },
+                {
+                    issuer: 'Oracle Academy',
+                    date: '24 June 2026',
+                    title: 'Applied Database Systems using Oracle AI Database',
+                    desc: 'Comprehensive coursework completion on enterprise database systems, SQL queries, and Oracle AI Database integration.',
+                    id: 'Instructor: Rhisa Adika Putri',
+                    wide: true
+                }
+            ];
+
+            let allCerts = [...defaultCerts, ...dynamicCertificates];
+
+            let gridHTML = '';
+            allCerts.forEach(cert => {
+                gridHTML += `
+                    <div class="bg-arasaka-surface/90 border border-arasaka-border p-5 cyber-border flex flex-col justify-between hover:border-arasaka-red transition ${cert.wide ? 'md:col-span-2 lg:col-span-2' : ''}">
+                        <div>
+                            <div class="flex justify-between items-start mb-3">
+                                <span class="bg-arasaka-red/20 text-arasaka-red font-mono-tech text-xs px-2 py-1 border border-arasaka-red/50">${cert.issuer}</span>
+                                <span class="text-xs font-mono-tech text-arasaka-muted">${cert.date}</span>
+                            </div>
+                            <h4 class="font-bold text-lg text-white mb-2">${cert.title}</h4>
+                            <p class="text-xs text-arasaka-muted font-mono-tech">${cert.desc}</p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-arasaka-border flex justify-between items-center text-xs font-mono-tech">
+                            <span class="text-arasaka-yellow">${cert.id}</span>
+                            <button onclick="openCertModal('${cert.title.replace(/'/g, "\\'")}', '${cert.issuer} (${cert.date})', '${cert.desc.replace(/'/g, "\\'")}')" class="text-arasaka-cyan hover:underline"><i class="fa-solid fa-eye mr-1"></i> View Details</button>
+                        </div>
+                    </div>
+                `;
+            });
+            grid.innerHTML = gridHTML;
+
+            if (harvardList) {
+                let harvardHTML = '';
+                allCerts.forEach(cert => {
+                    harvardHTML += `
+                        <div class="flex justify-between items-start border-b border-gray-100 pb-1.5">
+                            <div>
+                                <strong class="text-gray-900">${cert.title}</strong> — <span class="text-gray-700">${cert.issuer}</span>
+                                <div class="text-xs text-gray-600">${cert.desc}</div>
+                            </div>
+                            <div class="text-right text-xs text-gray-700 font-medium whitespace-nowrap ml-2">
+                                ${cert.date}
+                            </div>
+                        </div>
+                    `;
+                });
+                harvardList.innerHTML = harvardHTML;
+            }
+        }
+
+        renderCertificates();
+
+        function switchView(viewName) {
+            const portfolioView = document.getElementById('view-portfolio');
+            const cvView = document.getElementById('view-cv');
+            const btnPortfolio = document.getElementById('btn-portfolio');
+            const btnCv = document.getElementById('btn-cv');
+
+            if (viewName === 'portfolio') {
+                portfolioView.classList.remove('hidden');
+                cvView.classList.add('hidden');
+                
+                btnPortfolio.className = "px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all bg-arasaka-red text-white cyber-border-sm shadow-[0_0_10px_#ff003c]";
+                btnCv.className = "px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all text-arasaka-muted hover:text-white";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else if (viewName === 'cv') {
+                portfolioView.classList.add('hidden');
+                cvView.classList.remove('hidden');
+
+                btnCv.className = "px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all bg-arasaka-yellow text-black cyber-border-sm shadow-[0_0_10px_#f59e0b]";
+                btnPortfolio.className = "px-4 py-1.5 text-sm font-mono-tech font-bold uppercase transition-all text-arasaka-muted hover:text-white";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function openCertModal(title, subtitle, desc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalSubtitle').innerText = subtitle;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('certModal').classList.remove('hidden');
+        }
+
+        function openPhotoModal(src, caption) {
+            document.getElementById('modalImgSrc').src = src;
+            document.getElementById('modalImgCaption').innerText = caption;
+            document.getElementById('photoModal').classList.remove('hidden');
+        }
+
+        function openAdminModal() {
+            if (isAdmin) {
+                if (confirm("Select action:\n[OK] = Open Passcode Settings\n[Cancel] = Disconnect Admin Session")) {
+                    openChangePasscodeModal();
+                    return;
+                } else {
+                    isAdmin = false;
+                    document.getElementById('add-cert-btn').classList.add('hidden');
+                    document.getElementById('currently-edit-btn-container').classList.add('hidden');
+                    document.getElementById('admin-status-text').innerText = "Admin Login";
+                    document.getElementById('admin-badge').className = "px-3 py-1.5 bg-arasaka-panel border border-arasaka-border text-xs font-mono-tech text-arasaka-muted hover:text-white cyber-border-sm transition flex items-center space-x-1";
+                    alert("Admin session disconnected.");
+                    return;
+                }
+            }
+            document.getElementById('adminPasscode').value = '';
+            document.getElementById('loginError').classList.add('hidden');
+            document.getElementById('adminModal').classList.remove('hidden');
+        }
+
+        function verifyAdminLogin() {
+            const passcode = document.getElementById('adminPasscode').value;
+            if (passcode === customAdminPasscode || passcode === 'arasaka2026' || passcode === 'juan2026' || passcode === 'admin') {
+                isAdmin = true;
+                closeModals();
+                document.getElementById('add-cert-btn').classList.remove('hidden');
+                document.getElementById('currently-edit-btn-container').classList.remove('hidden');
+                document.getElementById('admin-status-text').innerText = "Owner [Active]";
+                document.getElementById('admin-badge').className = "px-3 py-1.5 bg-arasaka-panel border border-arasaka-red text-xs font-mono-tech text-arasaka-red cyber-border-sm transition flex items-center space-x-1 shadow-[0_0_8px_#ff003c]";
+                alert("Security Clearance Granted: Welcome back, Christopher Juan.");
+            } else {
+                document.getElementById('loginError').classList.remove('hidden');
+            }
+        }
+
+        function openChangePasscodeModal() {
+            if (!isAdmin) return;
+            document.getElementById('newPasscodeInput').value = customAdminPasscode;
+            document.getElementById('changePasscodeModal').classList.remove('hidden');
+        }
+
+        function saveNewPasscode() {
+            const newPass = document.getElementById('newPasscodeInput').value.trim();
+            if (!newPass) {
+                alert("Passcode cannot be empty.");
+                return;
+            }
+            customAdminPasscode = newPass;
+            localStorage.setItem('arasaka_admin_passcode', customAdminPasscode);
+            closeModals();
+            alert("Admin passcode successfully updated to: " + customAdminPasscode);
+        }
+
+        function openAddCertModal() {
+            if (!isAdmin) return;
+            document.getElementById('newIssuer').value = '';
+            document.getElementById('newTitle').value = '';
+            document.getElementById('newDate').value = '';
+            document.getElementById('newId').value = '';
+            document.getElementById('newDesc').value = '';
+            document.getElementById('addCertModal').classList.remove('hidden');
+        }
+
+        function saveNewCertificate() {
+            const issuer = document.getElementById('newIssuer').value.trim();
+            const title = document.getElementById('newTitle').value.trim();
+            const date = document.getElementById('newDate').value.trim();
+            const id = document.getElementById('newId').value.trim();
+            const desc = document.getElementById('newDesc').value.trim();
+
+            if (!issuer || !title || !date) {
+                alert("Please fill in at least the issuer, title, and date.");
+                return;
+            }
+
+            const newCert = { issuer, title, date, id: id || 'ID: VERIFIED', desc: desc || 'Certified achievement.' };
+            dynamicCertificates.push(newCert);
+            localStorage.setItem('arasaka_custom_certs', JSON.stringify(dynamicCertificates));
+
+            renderCertificates();
+            closeModals();
+            alert("New achievement published successfully to the Net!");
+        }
+
+        function openEditCurrentlyModal() {
+            if (!isAdmin) return;
+            document.getElementById('currItem1').value = currentActivities[0] || '';
+            document.getElementById('currItem2').value = currentActivities[1] || '';
+            document.getElementById('editCurrentlyModal').classList.remove('hidden');
+        }
+
+        function saveCurrentActivities() {
+            const itm1 = document.getElementById('currItem1').value.trim();
+            const itm2 = document.getElementById('currItem2').value.trim();
+
+            currentActivities = [
+                itm1 || currentActivities[0],
+                itm2 || currentActivities[1]
+            ];
+            localStorage.setItem('arasaka_current_assets', JSON.stringify(currentActivities));
+
+            renderCurrently();
+            closeModals();
+            alert("Current activities updated successfully!");
+        }
+
+        function closeModals() {
+            document.getElementById('certModal').classList.add('hidden');
+            document.getElementById('photoModal').classList.add('hidden');
+            document.getElementById('adminModal').classList.add('hidden');
+            document.getElementById('addCertModal').classList.add('hidden');
+            document.getElementById('editCurrentlyModal').classList.add('hidden');
+            document.getElementById('changePasscodeModal').classList.add('hidden');
+        }
+
+        window.onclick = function(event) {
+            const certModal = document.getElementById('certModal');
+            const photoModal = document.getElementById('photoModal');
+            const adminModal = document.getElementById('adminModal');
+            const addCertModal = document.getElementById('addCertModal');
+            const editCurrentlyModal = document.getElementById('editCurrentlyModal');
+            const changePasscodeModal = document.getElementById('changePasscodeModal');
+            if (event.target === certModal) certModal.classList.add('hidden');
+            if (event.target === photoModal) photoModal.classList.add('hidden');
+            if (event.target === adminModal) adminModal.classList.add('hidden');
+            if (event.target === addCertModal) addCertModal.classList.add('hidden');
+            if (event.target === editCurrentlyViewModal || event.target === editCurrentlyModal) editCurrentlyModal.classList.add('hidden');
+            if (event.target === changePasscodeModal) changePasscodeModal.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+```gui:Christopher Juan Manuel Susanto - Arasaka Portfolio & CV:index.html
